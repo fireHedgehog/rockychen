@@ -1,9 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Profile - [Your Name]</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<p>This is an example of a simple HTML page with one paragraph.</p>
+<header class="hero">
+    <div class="container">
+        <img src="your-photo.jpg" alt="Your Photo" class="profile-pic">
+        <h1>[Your Full Name]</h1>
+        <p>Ph.D. in [Your Field] | Researcher | [Your Institution]</p>
+    </div>
+</header>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! I am [Your Name], a researcher specializing in [Your Field]. My work focuses on [brief description of your research]. I am passionate about [topics of interest].</p>
+    </section>
+
+    <section id="publications" class="section">
+        <h2>Publications</h2>
+        <div class="publications-list">
+            <p>Doe, J., & Smith, A. (2023). <i>Title of the paper</i>. <u>Journal Name</u>, 45(3), 123-145. https://doi.org/xxxxx</p>
+            <p>Chen, R. (2022). <i>Understanding Spectrograms in Music Recognition</i>. <u>Applied Science Journal</u>, 32(1), 12-34. https://doi.org/yyyyy</p>
+            <!-- Add more publications here -->
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <ul class="timeline">
+            <li>
+                <h3>Ph.D. in [Your Field]</h3>
+                <p>[University Name] (2019 - 2023)</p>
+            </li>
+            <li>
+                <h3>Master's in [Your Field]</h3>
+                <p>[University Name] (2016 - 2018)</p>
+            </li>
+            <li>
+                <h3>Bachelor's in [Your Field]</h3>
+                <p>[University Name] (2012 - 2016)</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">https://linkedin.com/in/yourprofile</a></p>
+        <p>GitHub: <a href="https://github.com/firehedgehog" target="_blank">https://github.com/firehedgehog</a></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
