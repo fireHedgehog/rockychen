@@ -6,52 +6,95 @@
     <title>Research</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <style>
-        #about {
+        :root {
+            --base-color: #6f42c1; /* Bootstrap purple */
+        }
+
+        .primary-segment-color {
+            background-color: #8f48bf; /* Light lavender-gray */
+            border: 1px solid #ced4da;
+            border-radius: 8px; /* Rounded corners */
+            padding: 16px; /* Space between text and border */
+            color: gold;
+        }
+
+        .secondary-segment-color {
+            background-color: #a56bcc; /* Light lavender-gray */
+            border: 1px solid #ced4da;
+            border-radius: 8px; /* Rounded corners */
+            padding: 16px; /* Space between text and border */
+            color: wheat;
+        }
+
+        .tertiary-segment-color {
+            background-color: #bb8ed9; /* Light gray */
+            border: 1px solid #ced4da;
+            border-radius: 8px; /* Rounded corners */
+            padding: 16px; /* Space between text and border */
+            color: #333333;
+        }
+
+        .quaternary-segment-color {
+            background-color: #d1b1e6; /* Light gray-blue */
+            border: 1px solid #ced4da;
+            border-radius: 8px; /* Rounded corners */
+            padding: 16px; /* Space between text and border */
+            color: #333333;
+        }
+
+        .quinary-segment-color {
+            background-color: #e6d4f2; /* Light gray-blue */
+            border: 1px solid #ced4da;
+            border-radius: 8px; /* Rounded corners */
+            padding: 16px; /* Space between text and border */
+            color: #333333;
+        }
+        .grey-segment-color  {
             background-color: #e9ecef; /* Light gray-blue */
             border: 1px solid #ced4da;
             border-radius: 8px; /* Rounded corners */
             padding: 16px; /* Space between text and border */
+            color: #333333;
         }
-        #education {
-            background-color: #e9ecef; /* Light gray-blue */
+        .light-grey-segment-color  {
+            background-color: #f8f9fa;
             border: 1px solid #ced4da;
             border-radius: 8px; /* Rounded corners */
             padding: 16px; /* Space between text and border */
-        }
-
-        #publications {
-            background-color: #dee2e6; /* Light gray */
-            border: 1px solid #ced4da;
-            border-radius: 8px; /* Rounded corners */
-            padding: 16px; /* Space between text and border */
-        }
-
-        #research {
-            background-color: #f1f3f5; /* Light lavender-gray */
-            border: 1px solid #ced4da;
-            border-radius: 8px; /* Rounded corners */
-            padding: 16px; /* Space between text and border */
+            color: #333333;
         }
     </style>
 </head>
 <body>
 <div>
-    <section id="about" class="mb-5">
-        <h2>About Me</h2>
-        <p>Hi, I'm Rujia Chen, a Ph.D. candidate specializing in computer science and software engineering. My
-            research focuses on leveraging AI and spectrogram-based analysis for musical instrument recognition.</p>
+    <section class="mb-5 light-grey-segment-color">
+        <h3>About Me</h3>
+        <p>
+            Hi, I'm Rujia Chen, a Ph.D. candidate specializing in computer science and software engineering. My research
+            delves
+            into cutting-edge technologies, leveraging artificial intelligence, machine learning, and audio signal
+            processing
+            to explore innovative solutions in musical instrument recognition and beyond.
+        </p>
+        <p>
+            With a background in Computer Vision and AI, I work on developing advanced models that bridge the gap
+            between
+            theoretical research and practical applications. My passion lies in understanding complex patterns in data
+            and using
+            these insights to drive impactful innovations.
+        </p>
     </section>
 
-    <section id="education" class="mb-5">
-        <h4>Education</h4>
+    <section class="mb-5 grey-segment-color">
+        <h3>Education</h3>
         <ul>
             <li>Ph.D. in Computer and Information Sciences, Auckland University of Technology, 2020-Present</li>
             <li>Master of Computer and Information Sciences, Auckland University of Technology, 2019-2020</li>
         </ul>
     </section>
 
-    <section id="publications" class="mb-5">
-        <h2>Publications</h2>
+    <section class="mb-5 light-grey-segment-color">
+        <h3>Publications</h3>
         <ul>
             <li>Chen, R. (2024). Hierarchical Residual Attention Network for Musical Instrument Recognition Using
                 Scaled Multi-Spectrogram. <i>Applied Sciences</i>. DOI: <a
@@ -62,13 +105,29 @@
         </ul>
     </section>
 
-    <section id="research" class="mb-5">
-        <h2>Research</h2>
-        <p>My research focuses on:</p>
+    <section class="mb-5 grey-segment-color">
+        <h3>Research Focus</h3>
+        <p>My primary research interests include:</p>
         <ul>
-            <li>Deep learning for musical instrument recognition</li>
-            <li>Semi-supervised learning for ecological data analysis</li>
-            <li>AI-based spectrogram analysis</li>
+            <li>Deep learning algorithms for musical instrument recognition</li>
+            <li>Semi-supervised and unsupervised learning for ecological data analysis</li>
+            <li>AI-driven spectrogram analysis for audio classification</li>
+            <li>Applications of Computer Vision in audio-visual synchronization</li>
+            <li>Feature extraction and optimization in audio signal processing</li>
+            <li>Exploring multi-modal data fusion for enhanced prediction accuracy</li>
+        </ul>
+
+    </section>
+    <section class="mb-5 light-grey-segment-color">
+        <h3>Technical Expertise</h3>
+        <p>My expertise spans across:</p>
+        <ul>
+            <li>Machine Learning: Deep Neural Networks, Semi-supervised Learning, and Transfer Learning</li>
+            <li>Audio Signal Processing: Spectrogram analysis, feature engineering, and signal denoising</li>
+            <li>Artificial Intelligence: Model interpretability, generative AI, and ethical AI practices</li>
+            <li>Programming: Python, TensorFlow, PyTorch, MATLAB</li>
+            <li>Computer Vision: Object detection, feature extraction, and video analysis</li>
+            <li>Data Visualization: Matplotlib, Seaborn, and interactive dashboards</li>
         </ul>
     </section>
 </div>
