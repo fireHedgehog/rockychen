@@ -3,73 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Profile - [Your Name]</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <title>Rujia Chen - Academic Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Reset for body and html to take full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            height: 100vh; /* Full viewport height */
+            position: fixed; /* Fixed position to ensure it doesn't scroll */
+            width: 250px; /* Fixed width for sidebar */
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 250px; /* Same as sidebar width */
+            padding: 20px;
+            overflow-y: auto; /* Scrollable content if needed */
+        }
+
+        /* Navbar styling for professionalism */
+        .navbar {
+            background-color: #6f42c1; /* Bootstrap purple */
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+        }
+
+        .navbar .nav-link:hover {
+            color: #d1c4e9 !important;
+        }
+    </style>
 </head>
 <body>
-<header class="hero">
-    <div class="container">
-        <img src="your-photo.jpg" alt="Your Photo" class="profile-pic">
-        <h1>[Your Full Name]</h1>
-        <p>Ph.D. in [Your Field] | Researcher | [Your Institution]</p>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Rujia Chen</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="loadContent('about.html')">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="loadContent('publications.html')">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="loadContent('research.html')">Research</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</header>
-
-<nav class="navbar">
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
 </nav>
 
-<main>
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Hello! I am [Your Name], a researcher specializing in [Your Field]. My work focuses on [brief description of your research]. I am passionate about [topics of interest].</p>
-    </section>
-
-    <section id="publications" class="section">
-        <h2>Publications</h2>
-        <div class="publications-list">
-            <p>Doe, J., & Smith, A. (2023). <i>Title of the paper</i>. <u>Journal Name</u>, 45(3), 123-145. https://doi.org/xxxxx</p>
-            <p>Chen, R. (2022). <i>Understanding Spectrograms in Music Recognition</i>. <u>Applied Science Journal</u>, 32(1), 12-34. https://doi.org/yyyyy</p>
-            <!-- Add more publications here -->
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="sidebar bg-dark text-white p-3">
+        <div class="text-center">
+            <img src="./4_photo.jpg" alt="Rujia Chen" class="rounded-circle mb-3" style="width: 100px;">
+            <h4>Rujia Chen</h4>
+            <p>Ph.D. Candidate<br>Auckland University of Technology</p>
         </div>
-    </section>
+        <hr>
+        <p><i class="fas fa-envelope"></i> rj.chen91@gmail.com</p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/rujia-chen-0a6054150/" class="text-white" target="_blank">LinkedIn</a>
+        </p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/firehedgehog" class="text-white" target="_blank">GitHub</a></p>
+    </div>
 
-    <section id="education" class="section">
-        <h2>Education</h2>
-        <ul class="timeline">
-            <li>
-                <h3>Ph.D. in [Your Field]</h3>
-                <p>[University Name] (2019 - 2023)</p>
-            </li>
-            <li>
-                <h3>Master's in [Your Field]</h3>
-                <p>[University Name] (2016 - 2018)</p>
-            </li>
-            <li>
-                <h3>Bachelor's in [Your Field]</h3>
-                <p>[University Name] (2012 - 2016)</p>
-            </li>
-        </ul>
-    </section>
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <h2>Welcome to Rujia Chen's Profile</h2>
+        <p>Select a menu option to load content.</p>
+    </div>
+</div>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">https://linkedin.com/in/yourprofile</a></p>
-        <p>GitHub: <a href="https://github.com/firehedgehog" target="_blank">https://github.com/firehedgehog</a></p>
-    </section>
-</main>
+<script>
+    // Function to dynamically load HTML content
+    function loadContent(page) {
+        const mainContent = document.getElementById('main-content');
+        fetch(page)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${page}: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                mainContent.innerHTML = html;
+            })
+            .catch(error => {
+                mainContent.innerHTML = `<p>Error loading content: ${error.message}</p>`;
+            });
+    }
 
-<footer>
-    <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
-</footer>
+    // Load the default content (About page)
+    document.addEventListener('DOMContentLoaded', () => {
+        loadContent('about.html');
+    });
+</script>
 
-<script src="scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
