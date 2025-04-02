@@ -47,6 +47,35 @@
             overflow-y: auto;   /* Scrollable content if needed */
             height: calc(100vh - 70px); /* Full viewport height minus navbar height */
         }
+
+        @media print {
+            * {
+                box-shadow: none !important;
+                background: none !important;
+                overflow: visible !important;
+            }
+
+            a::after {
+                content: " (" attr(href) ")";
+                font-size: 90%;
+                color: #000;
+            }
+
+            nav {
+                display: none !important;
+            }
+        }
+
+        #supervisors-print-only {
+            display: none;
+        }
+
+        @media print {
+            #supervisors-print-only {
+                display: block !important;
+            }
+        }
+
     </style>
 </head>
 <body>
